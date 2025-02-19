@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+interface Post {
+  title: string
+  url: string
+  description: string
+  pubDate: string
+}
+
+const matches = import.meta.glob('./*.{md,mdx}', { eager: true })
+const posts: Post[] = Object.values(matches)
+
+---
+
+<Layout title="Blog">
+  <h1>Blog</h1>
+
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={post.url}>{post.title}</a>
+      </li>
+    ))}
+  </ul>
+</Layout>

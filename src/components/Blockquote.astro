@@ -1,0 +1,20 @@
+---
+const props = Astro.props;
+---
+<blockquote {...props}>
+  <span>“</span>
+  <slot /> <!-- Be sure to add a `<slot/>` for child content! -->
+</blockquote>
+
+<style>
+  blockquote {
+    font-style: italic;
+    border-left: 2px solid #333;
+    padding-left: 1rem;
+    > span {
+      font-size: 2rem;
+      line-height: 0;
+      margin-right: 0.5rem;
+    }
+  }
+</style>
