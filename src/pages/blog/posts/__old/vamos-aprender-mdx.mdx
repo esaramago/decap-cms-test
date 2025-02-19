@@ -3,14 +3,14 @@ import Blockquote from '@/components/Blockquote.astro'
 
 export const title = 'Vamos aprender MDX'
 export const description = 'dskcjbsdcjhfbjfhvbf'
-export const pubDate = '2021-10-01'
+export const date = '2025-01-01'
 export const components = {blockquote: Blockquote}
 
 <Layout>
   > This quote will be a custom Blockquote
 
   # {title}
-  {new Date(pubDate).toLocaleDateString('pt-PT', {
+  {new Date(date).toLocaleDateString('pt-PT', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'

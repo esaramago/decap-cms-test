@@ -1,6 +1,6 @@
 ---
-layout: ../../../components/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: Post fantasma
-description: Onde está o post????
-featuredImage: /images/uploads/dscf3056.jpg
+body: Onde está o post????
+image: /images/uploads/dscf3056.jpg
 ---

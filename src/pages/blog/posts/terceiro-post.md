@@ -1,6 +1,6 @@
 ---
-layout: ../../../components/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: Terceiro post
-description: "**xfgdfgbgfnfhnf** dfgbgfbhfg"
-featuredImage: /images/uploads/dscf3056.jpg
+body: "**xfgdfgbgfnfhnf** dfgbgfbhfg"
+image: /images/uploads/dscf3056.jpg
 ---

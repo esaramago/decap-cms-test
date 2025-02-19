@@ -1,0 +1,30 @@
+---
+import Layout from '@/components/Layout.astro'
+
+export interface Props {
+	content: {
+		title: string
+		body: string
+		date?: string
+		image?: string
+	}
+}
+
+const {
+	content: { title, body, date, image },
+} = Astro.props as Props
+
+---
+
+<Layout>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      <p>{date}</p>
+    </header>
+    <div>
+      {body}
+      {image && <img src={image} alt={title} />}
+    </div>
+  </article>
+</Layout>
