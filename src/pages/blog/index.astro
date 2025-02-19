@@ -1,4 +1,5 @@
 ---
+//@ts-ignore
 import Layout from '@/layouts/Layout.astro'
 
 interface Post {
@@ -9,6 +10,7 @@ interface Post {
 }
 
 const matches = import.meta.glob('./posts/*.mdx', { eager: true })
+//@ts-ignore
 const posts: Post[] = Object.values(matches)
 
 ---
