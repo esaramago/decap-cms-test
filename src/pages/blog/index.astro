@@ -8,7 +8,7 @@ interface Post {
   pubDate: string
 }
 
-const matches = import.meta.glob('./*.{md,mdx}', { eager: true })
+const matches = import.meta.glob('./posts/*.mdx', { eager: true })
 const posts: Post[] = Object.values(matches)
 
 ---

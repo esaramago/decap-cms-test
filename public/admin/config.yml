@@ -9,16 +9,16 @@ public_folder: "/images/uploads" # We do not need to specify the /public part as
 site_url: https://decapcmstest2.netlify.app
 display_url: https://decapcmstest2.netlify.app
 
-slug: { { slug } } # The URL should be the name of the title of the post/document
-
 collections:
-  - label: posts # Label used in the UI for the collection
-    label_singular: post # Label for singular post
-    name: posts # Name of the collection used for various functionality in the CMS
-    folder: /src/pages # Where each new post with .md should be saved
+  - label: Posts # Label used in the UI for the collection
+    label_singular: Post # Label for singular post
+    name: post # Used in routes, e.g., /admin/collections/blog
+    folder: /src/pages/blog/posts # Where each new post with .mdx should be saved
     create: true # Allows users to create new items in the collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
-      - { label: "Title", name: "title", widget: "string" } # Field Title
-      - { label: "Description", name: "description", widget: "markdown" } # Field Description
-      - { label: "Date of writing", name: "date", widget: "DateTime" } # Field Date of writing
-      - { label: "Featured image", name: "featuredImage", widget: "image" } # Field Featured Image
+      - { label: Layout, name: layout, widget: hidden, default: "../../../layouts/layout.astro" }
+      - { label: Title, name: title, widget: string } # Field Title
+      - { label: Description, name: description, widget: markdown } # Field Description
+      - { label: Date of writing, name: pubDate, widget: DateTime } # Field Date of writing
+      - { label: Featured image, name: featuredImage, widget: image } # Field Featured Image
